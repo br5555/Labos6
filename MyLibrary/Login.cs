@@ -15,6 +15,8 @@ namespace MyLibrary
     public partial class Login : Form
     {
         private XElement usersAndPasswords;
+
+        public event EventHandler UserLoggedIn;
         public Login()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace MyLibrary
             if (UserIsValid())
             {
                 this.Close();
+                UserLoggedIn?.Invoke(this, EventArgs.Empty);
             }
             else
             {
