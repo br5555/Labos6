@@ -34,7 +34,7 @@ namespace MyLibrary
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.buttonCancle = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,29 +77,38 @@ namespace MyLibrary
             this.LoginButton.TabIndex = 4;
             this.LoginButton.Text = "&Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // buttonCancle
+            // buttonCancel
             // 
-            this.buttonCancle.Location = new System.Drawing.Point(180, 144);
-            this.buttonCancle.Name = "buttonCancle";
-            this.buttonCancle.Size = new System.Drawing.Size(125, 43);
-            this.buttonCancle.TabIndex = 5;
-            this.buttonCancle.Text = "&Cancle";
-            this.buttonCancle.UseVisualStyleBackColor = true;
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancel.Location = new System.Drawing.Point(180, 144);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(125, 43);
+            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.Text = "&Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 208);
-            this.Controls.Add(this.buttonCancle);
+            this.CancelButton = this.buttonCancel;
+            this.ClientSize = new System.Drawing.Size(390, 223);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "Login";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "User Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +121,6 @@ namespace MyLibrary
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.Button buttonCancle;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

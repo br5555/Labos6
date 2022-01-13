@@ -16,5 +16,12 @@ namespace MyLibrary
         {
             InitializeComponent();
         }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            var login = new Login();
+            login.Show(this); //ShowDialog onemogucava drugim da dode fokus na njega (kao kad trazimo file)
+        }
     }
 }
