@@ -45,6 +45,7 @@ namespace MyLibrary
             this.dataGridViewPopisKnjiga.Name = "dataGridViewPopisKnjiga";
             this.dataGridViewPopisKnjiga.RowHeadersWidth = 51;
             this.dataGridViewPopisKnjiga.RowTemplate.Height = 24;
+            this.dataGridViewPopisKnjiga.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPopisKnjiga.Size = new System.Drawing.Size(731, 385);
             this.dataGridViewPopisKnjiga.TabIndex = 0;
             // 
